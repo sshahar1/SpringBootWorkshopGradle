@@ -25,3 +25,6 @@ Starting in this branch you are requested to:
 4. Add the actuator to your application
 5. Add the server host name to the actuator health check
    * You can use [this](https://fabianlee.org/2022/06/29/java-adding-custom-health-indicator-to-spring-boot-actuator/) as a reference
+
+# Final
+Congratulations on finishing all exercises. If time is left add a database service to your controller
