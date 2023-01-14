@@ -28,3 +28,5 @@ Starting in this branch you are requested to:
 
 # Final
 Congratulations on finishing all exercises. If time is left add a database service to your controller
+
+[This](https://www.baeldung.com/spring-boot-h2-database) can help you get started.
