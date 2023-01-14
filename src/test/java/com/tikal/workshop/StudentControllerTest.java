@@ -34,6 +34,6 @@ public class StudentControllerTest {
                 .contentType(APPLICATION_JSON)
                 .content("{}"))
                 .andExpect(status().isCreated())
-                .andExpect(content().string(is("123")));
+                .andExpect(content().string(is("1234")));
     }
 }
