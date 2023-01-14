@@ -11,7 +11,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
@@ -37,11 +36,11 @@ public class StudentControllerProfileTest {
     @Test
     public void testPost() throws Exception {
 
-        when(studentService.save(new Student("bla"))).thenReturn(123L);
+        when(studentService.save(new Student("bla"))).thenReturn(1000L);
         mockMvc.perform(post("/student/")
                 .contentType(APPLICATION_JSON)
                 .content("{}"))
                 .andExpect(status().isCreated())
-                .andExpect(content().string(is("123")));
+                .andExpect(content().string(is("1000")));
     }
 }
