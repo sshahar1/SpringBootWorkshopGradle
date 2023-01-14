@@ -15,3 +15,12 @@ Starting in this branch you are requested to:
    * Set the default name in command line
    * Change the profile
    * Use external properties file
+
+# Phase 3
+1. An asynchronous post construct method was added to the controller, run the application again
+2. Change the application server from tomcat to Jetty
+   * How come we didn't need to set tomcat before?
+   * Why is the application log so thin?
+3. Run the application with debug
+4. Add the actuator to your application
+5. Add the server host name to the actuator health check
