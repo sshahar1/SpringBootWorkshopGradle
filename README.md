@@ -7,7 +7,7 @@ Starting in this branch you are requested to:
 2. Use a default name by property in case the student body doesn't include a name
 3. Pass all the unit tests provided
 
-# Phase 2
+## Phase 2
 Starting in this branch you are requested to:
 1. Change the running port to 9090
 2. Pass all the unit tests provided
