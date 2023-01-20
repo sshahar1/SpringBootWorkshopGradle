@@ -30,3 +30,12 @@ Starting in this branch you are requested to:
 Congratulations on finishing all exercises. If time is left add a database service to your controller
 
 [This](https://www.baeldung.com/spring-boot-h2-database) can help you get started.
+
+# Day 2
+## Phase 1
+Welcome to day 2 of the Spring training. You tasks are:
+1. Convert this web application to an application that consumes student instances from a Kafka topic.
+2. Add another microservice with a REST controller that receives student instances and pushes them into a Kafka topic.
+3. Run the entire application with a Kafka cluster
+
+For Kafka feel free to use this distribution (requires Docker) https://github.com/wurstmeister/kafka-docker
