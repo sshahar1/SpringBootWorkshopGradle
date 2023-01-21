@@ -9,7 +9,8 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
-@ComponentScan({"com.tikal.workshop.controller", "com.tikal.workshop.service"})
+@ComponentScan({"com.tikal.workshop.controller", "com.tikal.workshop.service",
+"com.tikal.workshop.listener"})
 @EnableAsync
 @EntityScan({"com.tikal.workshop.entity"})
 @EnableJpaRepositories({"com.tikal.workshop.repository"})
