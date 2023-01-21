@@ -1,5 +1,6 @@
 package com.tikal.workshop.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.tikal.workshop.json.StudentJson;
 import com.tikal.workshop.service.AsyncService;
 import com.tikal.workshop.service.StudentService;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 
-import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.*;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
@@ -44,11 +45,16 @@ public class StudentController {
     }
 
     @RequestMapping(method = POST)
-    public ResponseEntity<Long> add(@RequestBody StudentJson json) {
-        if ( json.getName() == null ) {
-            json.setName(defaultName);
+    public ResponseEntity<Long> add(@RequestBody StudentJson studentJson) {
+        if ( studentJson.getName() == null ) {
+            studentJson.setName(defaultName);
         }
 
-        return new ResponseEntity<>(studentService.save(json.toEntity()), CREATED);
+        try {
+            studentService.save(studentJson);
+            return new ResponseEntity<>(CREATED);
+        } catch (JsonProcessingException ignored) {
+            return new ResponseEntity<>(BAD_REQUEST);
+        }
     }
 }
