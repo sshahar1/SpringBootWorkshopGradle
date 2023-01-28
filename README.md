@@ -34,8 +34,9 @@ Congratulations on finishing all exercises. If time is left add a database servi
 # Day 2
 ## Phase 1
 Welcome to day 2 of the Spring training. Your tasks are:
-1. Convert this web application to an application that consumes student instances from a Kafka topic.
-2. Add another microservice with a REST controller that receives student instances and pushes them into a Kafka topic.
-3. Run the entire application with a Kafka cluster
+1. Convert the web application to an application that:
+   1. Produces every student post to Kafka
+   2. Add a Kafka Listener that consumes the data from Kafka and inserts the student to the H2 database
+   3. Run the entire application with a Kafka cluster
 
 For Kafka feel free to use this distribution (requires Docker) https://github.com/wurstmeister/kafka-docker
