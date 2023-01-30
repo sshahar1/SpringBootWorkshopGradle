@@ -7,6 +7,7 @@ import com.tikal.workshop.exception.StudentNotFoundException;
 import com.tikal.workshop.json.StudentJson;
 import com.tikal.workshop.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,7 @@ public class StudentService {
         this.kafkaTemplate.send("students", objectMapper.writeValueAsString(student));
     }
 
+    @Cacheable(value = "studentCache")
     public StudentJson getByName(String name) throws StudentNotFoundException {
         Student student = this.studentRepository.getStudentByName(name);
         if ( student == null ) {
