@@ -40,3 +40,14 @@ Welcome to day 2 of the Spring training. Your tasks are:
    3. Run the entire application with a Kafka cluster
 
 For Kafka feel free to use this distribution (requires Docker) https://github.com/wurstmeister/kafka-docker
+
+## Phase 2
+1. Add an endpoint that queries the student table by name and returns the first result.
+2. Use Redis cache to reduce access to the SQL database.
+
+Bonus: Write a test that checks that the cache works.
+
+To run Redis on docker:
+```bash
+docker run --name yotpo-redis -p 6379:6379 -d redis 
+```
