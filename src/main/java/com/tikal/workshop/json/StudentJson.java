@@ -16,6 +16,10 @@ public class StudentJson {
 
     private String name;
 
+    public StudentJson(Student student) {
+        this.name = student.getName();
+    }
+
     public Student toEntity() {
         return new Student(this.name);
     }
