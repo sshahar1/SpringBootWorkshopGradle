@@ -27,6 +27,12 @@ Starting in this branch you are requested to:
    * You can use [this](https://fabianlee.org/2022/06/29/java-adding-custom-health-indicator-to-spring-boot-actuator/) as a reference
 
 ## Final
-Congratulations on finishing all exercises. If time is left add a database service to your controller
+Congratulations on finishing all exercises.
+If time is left:
+1. Add a database service to your controller
+2. Error handling with controller advisor
+3. Input verification for the REST controller
 
-[This](https://www.baeldung.com/spring-boot-h2-database) can help you get started.
+[This](https://www.baeldung.com/spring-boot-h2-database) can help you get started with databases.
+[This](https://www.baeldung.com/exception-handling-for-rest-with-spring) can help you get started with Controller advising.
+[This](https://www.baeldung.com/spring-boot-bean-validation) can help with input validation.
